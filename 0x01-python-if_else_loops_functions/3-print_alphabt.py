@@ -1,4 +1,4 @@
-#!/usr/bi/python3
-for i in range(97, 123):
-    if i != 101 and i != 113:
-        print(chr(i), end='')
+#!/usr/bin/python3
+for a in range(97, 123):
+    if a != ord('q') and a != ord('e'):
+        print("{:c}".format(a), end='')
