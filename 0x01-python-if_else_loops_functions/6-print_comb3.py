@@ -2,4 +2,4 @@
 for i in range(0, 10):
     for j in range(i+1, 10):
         print("{:d}{:x}".format(i, j), end=', ')
-print("\n")
+print("89")        
