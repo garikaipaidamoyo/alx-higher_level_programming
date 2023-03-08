@@ -3,7 +3,8 @@ def uppercase(str):
     """
     a function that prints a string in uppercase
     """
-    for c in str:
+    for c in str[:]:
         if ord(c) >= ord('a') and ord(c) <= ord('z'):
             c = chr(ord(c) - 32)
         print("{:s}".format(c), end='')
+    print()
