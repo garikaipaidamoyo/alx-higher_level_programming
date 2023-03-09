@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-if __name__ = "__main__":
+if __name__ == "__main__":
     """The program that prints the result of a and b"""
     from calculator_1 import add, sub, mul, div
 
