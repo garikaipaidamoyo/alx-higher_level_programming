@@ -2,12 +2,18 @@
 if _name_ == "_main_":
     import sys
 
-if len(sys.argv) == 1:
-    print("{} arguments.".format(len(sys.argv) - 1))
-elif len(sys.argv) == 2:
-    print("{} argument:".format(len(sys.argv) - 1))
-else:
-    print("{} arguments:".format(len(sys.argv) - 1))
+args = sys.argv[1:]  # Get command line arguments (excluding the script name)
+num_args = len(args)
 
-for a in range(1, len(sys.argv)):
-    print("{}: {}".format(a, sys.argv[a]))
+# Print number of arguments and argument(s) list
+print("Number of argument(s):", num_args, end=' ')
+if num_args == 0:
+    print(".")  # No arguments passed
+elif num_args == 1:
+    print("argument:")  # One argument passed
+else:
+    print("arguments:")  # Multiple arguments passed
+
+# Print each argument with its position
+for i, arg in enumerate(args):
+    print(i+1, ":", arg)
