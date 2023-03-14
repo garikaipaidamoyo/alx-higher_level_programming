@@ -1,19 +1,13 @@
-#!/usr/bin/pytho3
-if _name_ == "_main_":
+#!/usr/bin/python3
+if __name__ == "__main__":
     import sys
 
-args = sys.argv[1:]  # Get command line arguments (excluding the script name)
-num_args = len(args)
-
-# Print number of arguments and argument(s) list
-print("Number of argument(s):", num_args, end=' ')
-if num_args == 0:
-    print(".")  # No arguments passed
-elif num_args == 1:
-    print("argument:")  # One argument passed
+if len(sys.argv) == 1:
+    print("{} arguments.".format(len(sys.argv) - 1))
+elif len(sys.argv) == 2:
+    print("{} argument:".format(len(sys.argv) - 1))
 else:
-    print("arguments:")  # Multiple arguments passed
+    print("{} arguments:".format(len(sys.argv) - 1))
 
-# Print each argument with its position
-for i, arg in enumerate(args):
-    print(i+1, ":", arg)
+for a in range(1, len(sys.argv)):
+    print("{}: {}".format(a, sys.argv[a]))
