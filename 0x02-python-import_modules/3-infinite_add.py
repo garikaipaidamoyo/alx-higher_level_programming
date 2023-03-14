@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    import sys
-
-args = sys.argv[1:]
-total = sum(int(arg) for arg in args)
-print(total)
+    from sys import argv
+    if len(argv) >= 2:
+        print(sum([int(number) for number in argv[1:]]))
+    else:
+        print("{:d}".format(0))
