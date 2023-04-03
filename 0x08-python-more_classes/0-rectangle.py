@@ -3,5 +3,5 @@ class Rectangle:
     pass
 
 
-p = Person()
-print(p)
+r = Rectangle()
+print(r)
